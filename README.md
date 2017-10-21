@@ -61,6 +61,7 @@ $ ansible-playbook -i hosts squid.yml
 
   roles:
     - "marcinpraczko.squid"
+```
 
 #### Example Hosts
 
