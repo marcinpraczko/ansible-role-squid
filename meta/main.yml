@@ -1,0 +1,17 @@
+---
+galaxy_info:
+    author: Marcin Praczko
+    description: Very simple role for installing Squid
+    license: GNU GPLv2
+    min_ansible_version: 2.0
+
+    platforms:
+        - name: EL
+          versions:
+              - 5
+              - 6
+              - 7
+    categories:
+        - system
+
+dependencies: []

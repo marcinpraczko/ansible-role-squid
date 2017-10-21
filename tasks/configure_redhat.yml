@@ -1,0 +1,18 @@
+---
+
+- name: "Configure | RedHat | Create config File"
+  template:
+    src: "squid.conf.j2"
+    dest: "/etc/squid/squid.conf"
+    owner: "root"
+    group: "squid"
+    mode: "0640"
+  when: ansible_os_family == "RedHat"
+  notify: "Restart squid - RedHat"
+
+- name: "Configure | RedHat | Ensure that service is enabled and running"
+  service:
+    name: "squid"
+    enabled: True
+    state: started
+  when: ansible_os_family == "RedHat"

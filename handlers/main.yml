@@ -1,0 +1,6 @@
+---
+- name: "Restart squid - RedHat"
+  service:
+    name: "squid"
+    state: restarted
+  when: ansible_os_family == "RedHat"

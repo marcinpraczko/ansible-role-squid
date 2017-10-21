@@ -1,0 +1,13 @@
+---
+
+- name: "Include installation for RedHat"
+  include: install_redhat.yml
+  when: ansible_os_family == "RedHat"
+  tags:
+    - install
+
+- name: "Include configuration for RedHat"
+  include: configure_redhat.yml
+  when: ansible_os_family == "RedHat"
+  tags:
+    - configure

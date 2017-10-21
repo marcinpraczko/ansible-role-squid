@@ -1,0 +1,17 @@
+---
+file:
+  /etc/squid/squid.conf:
+    exists: True
+    owner: root
+    group: squid
+
+port:
+  tcp:3128:
+    listening: True
+    ip:
+      - 0.0.0.0
+
+service:
+  squid:
+    enabled: true
+    running: true
